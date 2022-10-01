@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* =============== typography start ============= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.max-width {
+    max-width: 1140px;
+    padding: 0 60px;
+    margin: auto;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.about_section .about_content,
+.services_section .services_content,
+.skills_section .skills_content,
+.contact_section .contact_content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .title {
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 65px;
+    padding-bottom: 25px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 200px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    font-size: 20px;
+    color: tomato;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+
+/* ================ typography end ===========*/
+
+
+/* ================ navbar css start =========== */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0px;
+    z-index: 999;
+    background: rgb(61, 57, 56);
+}
+
+.navbar.sticky {
+    background: linear-gradient(45deg, red, blue);
+    padding: 15px 0;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: rgb(26, 116, 155);
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .logo a span {
+    color: rgb(197, 27, 129);
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: yellowgreen;
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+    filter: brightness(90%);
+}
+
+
+/* ================ navbar css end =========== */
+
+
+/* ================ banner_section css start =============== */
+
+.banner_section {
+    display: flex;
+    background: url("../../img/banner.jpg") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner_section .max-width {
+    width: 100%;
+    display: flex;
+}
+
+.banner_section .banner_content {
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.banner_section .banner_content .text-1 {
+    font-size: 25px;
+}
+
+.banner_section .banner_content .text-2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: -5px;
+}
+
+.banner_section .banner_content .text-3 {
+    font-size: 35px;
+}
+
+.banner_section .banner_content .text-3 span {
+    color: crimson;
+    font-weight: 500;
+}
+
+.banner_section .banner_content a {
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px 30px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 2px solid tomato;
+    transition: all 0.3s ease;
+}
+
+.banner_section .banner_content a:hover {
+    color: tomato;
+    background: transparent;
+}
+
+
+/* ================ banner_section css end =============== */
+
+
+/* ================ about_section css start =============== */
+
+.about_section .title::after {
+    content: "who I am";
+}
+
+.about_section .about_content .left {
+    width: 45%;
+}
+
+.about_section .about_content .left img {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about_section .about_content .right {
+    width: 55%;
+}
+
+.about_section .about_content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about_section .about_content .right .text span {
+    color: crimson;
+}
+
+.about_section .about_content .right p {
+    text-align: justify;
+}
+
+.about_section .about_content .right a {
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 2px solid tomato;
+    transition: all 0.3s ease;
+}
+
+.about_section .about_content .right a:hover {
+    color: tomato;
+    background: transparent;
+}
+
+
+/* ================ about_section css end =============== */
+
+
+/* ================ services_section css start =============== */
+
+.services_section,
+.teams_section {
+    background: #dfdfdf;
+}
+
+.services_section .title::after,
+.teams_section .title::after {
+    background: #dfdfdf;
+    content: "We provide";
+}
+
+.services_section .services_content .card {
+    width: calc(33% - 20px);
+    background: rgb(202, 185, 185);
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services_section .services_content .card:hover {
+    background: crimson;
+}
+
+.services_section .services_content .card .box {
+    transition: all 0.3s ease;
+}
+
+.services_section .services_content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.services_section .services_content .card i {
+    font-size: 50px;
+    color: tomato;
+    transition: color 0.3s ease;
+}
+
+.services_section .services_content .card:hover i {
+    color: #fff;
+}
+
+.services_section .services_content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+
+/* ================ services_section css end =============== */
+
+
+/* ================ skills_section css start =============== */
+
+.skills_section .title::after {
+    content: "what I know";
+}
+
+.skills_section .skills_content .column {
+    width: calc(50% - 30px);
+}
+
+.skills_section .skills_content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills_section .skills_content .left p {
+    text-align: justify;
+}
+
+.skills_section .skills_content .left a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.skills_section .skills_content .left a:hover {
+    color: crimson;
+    background: none;
+}
+
+.skills_section .skills_content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills_section .skills_content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills_section .skills_content .right span {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.skills_section .skills_content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.skills_section .skills_content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills_content .right .html::before {
+    width: 90%;
+}
+
+.skills_content .right .css::before {
+    width: 60%;
+}
+
+.skills_content .right .js::before {
+    width: 80%;
+}
+
+.skills_content .right .php::before {
+    width: 50%;
+}
+
+.skills_content .right .mysql::before {
+    width: 70%;
+}
+
+
+/* ================ skills_section css end =============== */
+
+
+/* ================ teams_section css start =============== */
+
+.teams_section .title::after {
+    content: "who with me";
+}
+
+.teams_section .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.teams_section .carousel .card:hover {
+    background: crimson;
+}
+
+.teams_section .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams_section .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams_section .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.teams_section .carousel .card img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.teams_section .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson!important;
+}
+
+
+/* ================ teams_section css end  =============== */
+
+
+/* ================ contact_section css start  =============== */
+
+.contact_section .title::after {
+    content: "enquire now";
+}
+
+.contact_section .contact_content .column {
+    width: calc(50% - 30px);
+}
+
+.contact_section .contact_content .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact_section .contact_content .left p {
+    text-align: justify;
+}
+
+.contact_section .contact_content .left .icons {
+    margin: 10px 0;
+}
+
+.contact_section .contact_content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact_section .contact_content .row .info {
+    margin-left: 30px;
+}
+
+.contact_section .contact_content .row i {
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact_section .contact_content .info .head {
+    font-weight: 500;
+}
+
+.contact_section .contact_content .info .sub-title {
+    color: #333;
+}
+
+.contact_section .right form .fields {
+    display: flex;
+}
+
+.contact_section .right form .field,
+.contact_section .right form .fields .field {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact_section .right form .textarea {
+    height: 80px;
+    width: 100%;
+}
+
+.contact_section .right form .name {
+    margin-right: 10px;
+}
+
+.contact_section .right form .field input,
+.contact_section .right form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contact_section .right form .field input:focus,
+.contact_section .right form .textarea textarea:focus {
+    border-color: #b3b3b3;
+}
+
+.contact_section .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
+}
+
+.contact_section .right form .button-area {
+    display: flex;
+    align-items: center;
+}
+
+.right form .button-area button {
+    color: #fff;
+    display: block;
+    width: 160px!important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.right form .button-area button:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/* ================ contact_section css end  =============== */
+
+
+/* ================ footer_section css start  =============== */
+
+footer {
+    background: #111;
+    padding: 25px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================ footer_section css end  =============== */
+
+
+/* ================ media-query css start =============== */
+
+@media (max-width: 1104px) {
+    .about_section .about_content .about-left img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .banner_section .banner_content .text-2 {
+        font-size: 70px;
+    }
+    .banner_section .banner_content .text-3 {
+        font-size: 35px;
+    }
+    .banner_section .banner_content a {
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width {
+        max-width: 930px;
+    }
+    .about_section .about_content {
+        width: 100%;
+    }
+    .about_section .about_content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about_section .about_content .right {
+        flex: 100%;
+    }
+    .services_section .services_content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills_section .skills_content .column,
+    .contact_section .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .banner_section .banner_content .text-2 {
+        font-size: 60px;
+    }
+    .banner_section .banner_content .text-3 {
+        font-size: 32px;
+    }
+    .banner_section .banner_content a {
+        font-size: 20px;
+    }
+    .services_section .services_content .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner_section .banner_content .text-2 {
+        font-size: 50px;
+    }
+    .banner_section .banner_content .text-3 {
+        font-size: 27px;
+    }
+    .about_section .about_content .right .text,
+    .skills_section .skills_content .left .text {
+        font-size: 19px;
+    }
+    .contact_section .right form .fields {
+        flex-direction: column;
+    }
+    .contact_section .right form .name,
+    .contact_section .right form .email {
+        margin: 0;
+    }
+    .right form .error-box {
+        width: 150px;
+    }
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
+
+
+/* ================ media-query css end =============== */
